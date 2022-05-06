@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Minion List</h1>
+
+{% for minion in minions %}
+  <div class="card">
+    <div class="card-content">
+      <span class="card-title">{{ minion.name }}</span>
+      <p>Hair: {{ minion.hair }}</p>
+      <p>Clothing: {{ minion.clothing }}</p>
+      <p>Eyes: {{ minion.eyes }}</p>
+    </div>
+  </div>
+{% endfor %}
+
+<h1>{{ hello }}</h1>
+
+{% endblock %}
+
