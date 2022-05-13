@@ -5,12 +5,14 @@
 
 {% for minion in minions %}
   <div class="card">
-    <div class="card-content">
-      <span class="card-title">{{ minion.name }}</span>
-      <p>Hair: {{ minion.hair }}</p>
-      <p>Clothing: {{ minion.clothing }}</p>
-      <p>Eyes: {{ minion.eyes }}</p>
-    </div>
+    <a href="/minions/{{ minion.id }}">
+      <div class="card-content">
+        <span class="card-title">{{ minion.name }}</span>
+        <p>Type: {{ minion.Type }}</p>
+        <p>Description: {{ minion.description }}</p>
+        <p>Eyes: {{ minion.eyes }}</p>
+      </div>
+    </a>
   </div>
 {% endfor %}
 

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Weapon List</h1>
+
+{% for weapon in weapon_list %}
+  <a href="{% url 'weapons_detail' weapon.id %}">
+    <div class="card">
+        <div class="card-content">
+            <span class="card-title">{{ weapon.name }}</span>
+            <p>Color: {{ weapon.color }}</p>
+        </div>
+    </div>
+  </a>
+{% endfor %}
+
+{% endblock %}
